@@ -414,94 +414,97 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Patient Registration Form</h4>
-                                <p class="text-muted m-b-15 f-s-12">Carefully input the patient's details.</p>
+                                <h4 class="card-title">Referral Registration Form</h4>
+                                <p class="text-muted m-b-15 f-s-12">Carefully input the following details.</p>
                                 <div class="basic-form">
                                     <form>
                                         <div class="form-row">
-                                            <div class="form-group col-md-4">
+                                            <div class="form-group col-md-2">
+                                                <label>Title (Optional)</label>
+                                                <input type="text" class="form-control" placeholder="Enter title (Dr.)" />
+                                            </div>
+                                            <div class="form-group col-md-5">
                                                 <label>First Name</label>
                                                 <input type="text" class="form-control" placeholder="Enter first name" />
                                             </div>
-                                             <div class="form-group col-md-4">
+                                             <div class="form-group col-md-5">
                                                 <label>Last Name</label>
                                                 <input type="text" class="form-control" placeholder="Enter last name" />
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                                <label>Middle Name (Optional)</label>
-                                                <input type="text" class="form-control" placeholder="Enter middle name" />
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-4">
-                                              <label>Date of Birth</label>
-                                              <input type="date" class="form-control" />
+                                              <label>Referral Phone Number</label>
+                                              <input type="tel" class="form-control" placeholder="Enter referral phone number"/>
                                             </div>
+                                            <div class="form-group col-md-8">
+                                                <label>Referral Email Address</label>
+                                                <div class="input-group">
+                                                    <input type="email" class="form-control" placeholder="Enter email address" required />
+                                                    <div class="input-group-append">
+                                                        <select class="form-control">
+                                                            <option>@gmail.com</option>
+                                                            <option>@yahoo.com</option>
+                                                            <option>@outlook.com</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
                                             <div class="form-group col-md-4">
-                                              <label>Gender</label>
+                                                <label>Referral Role</label>
+                                                <input type="text" class="form-control" placeholder="What's the role of the referral (Doctor)?" />
+                                            </div>
+                                            <div class="form-group col-md-8">
+                                                <label>Referral Address (Optional)</label>
+                                                <input type="text" class="form-control" placeholder="What's the address of the referral?" />
+                                            </div>
+                                        </div>
+
+                                        <hr />
+
+                                        <h4 class="card-title mt-4">Healthcare Facility Details Form</h4>
+                                        <p class="text-muted m-b-15 f-s-12">Carefully input the following details.</p>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                                <label>Healthcare Facility Name (Hospital, Lab, Clinic)</label>
+                                                <input type="text" class="form-control" placeholder="Enter name of healthcare facility" />
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                              <label>Healthcare Facility Address</label>
+                                              <input type="text" class="form-control" placeholder="Enter address of healthcare facility" />
+                                            </div>
+                                          </div>
+                                          <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                              <label>Healthcare Type</label>
                                               <select class="form-control">
-                                                <option value="">Select gender</option>
-                                                <option>Male</option>
-                                                <option>Female</option>
-                                                <option>Other</option>
-                                              </select>
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                                <label>Marital Status</label>
-                                                <select class="form-control">
-                                                    <option value="">Select marital status</option>
-                                                    <option>Married</option>
-                                                    <option>Single</option>
-                                                    <option>Widowed</option>
+                                                    <option value="">Select healthcare type</option>
+                                                    <option>Hospital</option>
+                                                    <option>Diagnostics Centre</option>
+                                                    <option>Clinic</option>
+                                                    <option>Health Centre</option>
                                                     <option>Other</option>
                                                   </select>
-                                              </div>
-                                          </div>
-                                    
-                                          <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                              <label>Address</label>
-                                              <input type="text" class="form-control" placeholder="Enter address" />
                                             </div>
-                                          </div>
-                                    
-                                          <div class="form-row">
-                                            <div class="form-group col-md-4">
-                                              <label>City</label>
-                                              <input type="text" class="form-control" placeholder="Enter city" />
+                                            <div class="form-group col-md-3">
+                                              <label>Other Healthcare Type (Optional)</label>
+                                              <input type="text" class="form-control" placeholder="Enter other facility type" />
                                             </div>
-                                            <div class="form-group col-md-4">
-                                              <label>State/Region</label>
-                                              <input type="text" class="form-control" placeholder="Enter state" />
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                              <label>ZIP/Postal Code</label>
-                                              <input type="text" class="form-control" placeholder="Enter ZIP code" />
-                                            </div>
-                                          </div>
-                                    
-                                          <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                              <label>Phone Number</label>
-                                              <input type="tel" class="form-control" placeholder="Enter phone number"/>
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                              <label>Email Address</label>
-                                              <input type="email" class="form-control" placeholder="Enter email address" required />
-                                            </div>
-                                          </div>
-                                    
-                                          <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                              <label>Notes</label>
-                                              <textarea class="form-control" rows="4" placeholder="Enter additional notes"></textarea>
+                                            <div class="form-group col-md-5">
+                                              <label>Healthcare Facility Phone Number (Optional)</label>
+                                              <input type="tel" class="form-control" placeholder="Enter facility phone number"/>
                                             </div>
                                           </div>
                                     </form>
                                 </div>
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                    <button type="reset" class="btn btn-secondary">Reset</button>  
+                                <div class="form-actions float-right">
+                                    <button type="reset" class="btn btn-secondary mb-1" style="min-width: 140px;">Clear Data</button>
+                                    <button type="submit" class="btn btn-primary mb-1" style="min-width: 140px;">Submit</button>
                                 </div>
                             </div>
                         </div>

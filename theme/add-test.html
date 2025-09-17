@@ -414,94 +414,110 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Patient Registration Form</h4>
-                                <p class="text-muted m-b-15 f-s-12">Carefully input the patient's details.</p>
+                                <h4 class="card-title">Add New Test</h4>
+                                <p class="text-muted m-b-15 f-s-12">Carefully input the test details.</p>
                                 <div class="basic-form">
+                                    <h5 class="card-subtitle mb-3 mt-3">Basic Information</h5>
                                     <form>
                                         <div class="form-row">
-                                            <div class="form-group col-md-4">
-                                                <label>First Name</label>
-                                                <input type="text" class="form-control" placeholder="Enter first name" />
+                                            <div class="form-group col-md-2">
+                                                <label>Unique Test ID</label>
+                                                <input type="text" class="form-control" />
                                             </div>
-                                             <div class="form-group col-md-4">
-                                                <label>Last Name</label>
-                                                <input type="text" class="form-control" placeholder="Enter last name" />
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                                <label>Middle Name (Optional)</label>
-                                                <input type="text" class="form-control" placeholder="Enter middle name" />
+                                             <div class="form-group col-md-10">
+                                                <label>Test Name</label>
+                                                <input type="text" class="form-control" placeholder="Enter test full name" />
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-4">
-                                              <label>Date of Birth</label>
-                                              <input type="date" class="form-control" />
+                                                <label>Test Category</label>
+                                                <select class="form-control">
+                                                    <option value="">Select category</option>
+                                                    <option>Laboratory</option>
+                                                    <option>Radiology</option>
+                                                    <option>Sonography</option>
+                                                </select>
                                             </div>
                                             <div class="form-group col-md-4">
-                                              <label>Gender</label>
+                                                <label>Test Sub-category</label>
+                                                <select class="form-control">
+                                                    <option value="">Select sub-category</option>
+                                                    <option>Hematology</option>
+                                                    <option>Chemistry</option>
+                                                    <option>Microbiology</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                              <label>Status</label>
                                               <select class="form-control">
-                                                <option value="">Select gender</option>
-                                                <option>Male</option>
-                                                <option>Female</option>
-                                                <option>Other</option>
+                                                <option value="">Select status</option>
+                                                <option>Active</option>
+                                                <option>Draft</option>
+                                                <option>Inactive</option>
                                               </select>
                                             </div>
-                                            <div class="form-group col-md-4">
-                                                <label>Marital Status</label>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12 position-relative">
+                                                <label for="testSearch">Associated Conditions</label>
+                                                <input type="text" class="form-control" id="testSearch" placeholder="Enter symptoms associated with this test" autocomplete="off">
+
+                                                <div id="searchSuggestions" class="list-group position-absolute w-100 d-none" style="z-index: 1000;">
+                                                    <!-- Suggestions will be injected here -->
+                                                </div>
+
+                                                <div id="selectedTags" class="mt-2 d-flex flex-wrap">
+                                                    <!-- Tags will be injected here -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                              <label>Description</label>
+                                              <textarea class="form-control" rows="4" placeholder="Enter the description of the test"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <hr />
+
+                                        <h5 class="card-subtitle mb-3 mt-3">Category Test Details</h5>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label>Specimen Type</label>
                                                 <select class="form-control">
-                                                    <option value="">Select marital status</option>
-                                                    <option>Married</option>
-                                                    <option>Single</option>
-                                                    <option>Widowed</option>
-                                                    <option>Other</option>
-                                                  </select>
-                                              </div>
-                                          </div>
-                                    
-                                          <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                              <label>Address</label>
-                                              <input type="text" class="form-control" placeholder="Enter address" />
+                                                    <option value="">Select specimen needed for test</option>
+                                                    <option>Whole Blood</option>
+                                                    <option>Urine</option>
+                                                    <option>Serum</option>
+                                                </select>
                                             </div>
-                                          </div>
-                                    
-                                          <div class="form-row">
-                                            <div class="form-group col-md-4">
-                                              <label>City</label>
-                                              <input type="text" class="form-control" placeholder="Enter city" />
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                              <label>State/Region</label>
-                                              <input type="text" class="form-control" placeholder="Enter state" />
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                              <label>ZIP/Postal Code</label>
-                                              <input type="text" class="form-control" placeholder="Enter ZIP code" />
-                                            </div>
-                                          </div>
-                                    
-                                          <div class="form-row">
+
                                             <div class="form-group col-md-6">
-                                              <label>Phone Number</label>
-                                              <input type="tel" class="form-control" placeholder="Enter phone number"/>
+                                                <label>Container Type</label>
+                                                <select class="form-control">
+                                                    <option value="">Select container needed to collect test specimen</option>
+                                                    <option>Red-top tube</option>
+                                                    <option>Green-top tube</option>
+                                                    <option>Sterile cup</option>
+                                                </select>
                                             </div>
-                                            <div class="form-group col-md-6">
-                                              <label>Email Address</label>
-                                              <input type="email" class="form-control" placeholder="Enter email address" required />
-                                            </div>
-                                          </div>
-                                    
-                                          <div class="form-row">
+                                        </div>
+
+                                         <div class="form-row">
                                             <div class="form-group col-md-12">
-                                              <label>Notes</label>
-                                              <textarea class="form-control" rows="4" placeholder="Enter additional notes"></textarea>
+                                              <label>Patient Preparation</label>
+                                              <textarea class="form-control" rows="4" placeholder="Enter additional details to take note of (e.g. Take this test latest by 10am and do not eat before coming)"></textarea>
                                             </div>
-                                          </div>
+                                        </div>
+
                                     </form>
                                 </div>
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                    <button type="reset" class="btn btn-secondary">Reset</button>  
+                                <div class="form-actions float-right">
+                                    <button type="reset" class="btn btn-secondary mb-1" style="min-width: 140px;">Clear Data</button>
+                                    <button type="submit" class="btn btn-primary mb-1" style="min-width: 140px;">Submit</button>
                                 </div>
                             </div>
                         </div>

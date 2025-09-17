@@ -10678,22 +10678,20 @@ input[type="checkbox"]:checked:after {
   margin-top: 10px; }
 
 .dataTables_filter input {
-  background-color: transparent;
-  background-position: center bottom, center calc(100% - 1px);
-  background-repeat: no-repeat;
-  background-size: 0 2px, 100% 1px;
-  border: 0 none;
-  border-radius: 0;
-  box-shadow: none;
-  float: none;
+  border: 1px solid #ccc !important;   /* add border */
+  border-radius: 6px;                  /* rounded corners */
+  padding: 6px 12px;                   /* spacing inside */
   margin-left: 10px;
-  transition: background 0s ease-out 0s; }
+  width: 100%;                         /* full width if you want */
+  background-color: #fff !important;   /* white background */
+  box-shadow: none !important;
+  transition: border-color 0.3s ease;
+}
 
 .dataTables_filter input:focus {
-  background-size: 100% 2px, 100% 1px;
-  box-shadow: none;
-  outline: medium none;
-  transition-duration: 0.3s; }
+  border-color: #007bff !important;    /* highlight on focus */
+  outline: none;
+}
 
 table.dataTable thead .sorting,
 table.dataTable thead .sorting_asc,
